@@ -1,0 +1,38 @@
+<div style="padding: 20px; background: #0a0a0c; min-height: 100vh; color: white;">
+  
+  <div style="text-align: center; margin-bottom: 40px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+    <button (click)="filterByMood('All')" [style.background]="selectedMood === 'All' ? '#ff007f' : '#1a1a1c'" class="mood-btn">All</button>
+    <button (click)="filterByMood('Happy')" [style.background]="selectedMood === 'Happy' ? '#ff007f' : '#1a1a1c'" class="mood-btn">Happy 😊</button>
+    <button (click)="filterByMood('Hungry')" [style.background]="selectedMood === 'Hungry' ? '#ff007f' : '#1a1a1c'" class="mood-btn">Hungry 🔥</button>
+    <button (click)="filterByMood('Relax')" [style.background]="selectedMood === 'Relax' ? '#ff007f' : '#1a1a1c'" class="mood-btn">Relax 🌊</button>
+    <button (click)="filterByMood('Healthy')" [style.background]="selectedMood === 'Healthy' ? '#ff007f' : '#1a1a1c'" class="mood-btn">Healthy 🥗</button>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;">
+    <div *ngFor="let item of filteredItems" style="background: #1a1a1c; border-radius: 15px; overflow: hidden; border: 1px solid #333; display: flex; flex-direction: column;">
+      <img [src]="item.image" style="width: 100%; height: 200px; object-fit: cover;">
+      
+      <div style="padding: 15px; flex-grow: 1;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="margin: 0; color: #fff;">{{ item.name }}</h3>
+          <span style="color: #00f2ff; font-weight: bold;">${{ item.price }}</span>
+        </div>
+        <p style="color: #888; font-size: 0.9rem; margin: 10px 0;">{{ item.description }}</p>
+
+        <div style="margin: 15px 0; border-top: 1px solid #333; padding-top: 10px;">
+          <label style="font-size: 0.8rem; color: #00f2ff;">Your Review:</label>
+          <textarea 
+            #userFeedback
+            placeholder="Tell us what you think..." 
+            style="width: 100%; background: #0a0a0c; color: white; border: 1px solid #444; border-radius: 5px; padding: 5px; font-size: 0.8rem; margin-top: 5px; resize: none;"
+          ></textarea>
+          <div style="color: #ffcc00; margin-top: 5px; font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <button (click)="addToCart(item); userFeedback.value=''" style="width: 100%; padding: 10px; background: #ff007f; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">
+          Add to Order
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

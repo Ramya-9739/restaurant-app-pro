@@ -1,0 +1,73 @@
+.container {
+  padding: 80px 5% 40px; /* Space for the navbar */
+  min-height: 100vh;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.food-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 2px solid var(--accent-pink);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--electric-blue);
+}
+
+.order-btn {
+  background: transparent;
+  border: 1px solid var(--accent-pink);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: var(--accent-pink);
+  box-shadow: 0 0 10px var(--accent-pink);
+}
+.mood-btn {
+  padding: 10px 25px;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.mood-btn:hover {
+  border-color: #ff007f;
+}
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px); /* Lifts the card up */
+  box-shadow: 0 10px 20px rgba(255, 0, 127, 0.3); /* Adds a pink glow */
+}

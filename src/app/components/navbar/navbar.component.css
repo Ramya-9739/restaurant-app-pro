@@ -1,0 +1,46 @@
+.glass-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: #000; 
+  position: sticky; 
+  top: 0;
+  z-index: 1000; 
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Provides a clear 30px gap between Menu and Checkout */
+  flex-direction: row; 
+}
+
+.nav-links a {
+  color: white !important; 
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav-links a.active {
+  color: #ff007f !important; 
+  border-bottom: 2px solid #ff007f;
+  padding-bottom: 5px;
+}
+
+.checkout-btn {
+  background-color: #ff007f;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap; 
+}

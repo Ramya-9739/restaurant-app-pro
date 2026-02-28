@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f2f6; /* Soft grey background */
+  color: #2f3542;
+  margin: 0;
+  padding: 0;
+  /* Replace the URL below with your specific direct image link */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background still while you scroll */
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* This makes your "Our Delicious Menu" title white so it's readable on the dark background */
+h1, h2 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+
+
+}.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0a0a0c;
+  border-bottom: 2px solid #ff007f;
+}
+
+.logo h1 {
+  color: white;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* This creates the space between Home, Menu, and Cart */
+}
+
+.nav-links a {
+  color: #00f2ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+  text-shadow: 0 0 10px #00f2ff;
+}

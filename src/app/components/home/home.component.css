@@ -1,0 +1,65 @@
+.hero-container {
+  /* Subtract roughly 80px (navbar height) to keep it centered */
+  height: calc(100vh - 80px); 
+  width: 100%;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+              url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Flexbox settings for centering */
+  display: flex;
+  flex-direction: column; /* Stack title and button vertically */
+  align-items: center;    /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  margin-top: 0; 
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  
+  /* --- THE FIX --- */
+  margin: 0;           /* Keeps the top clean */
+  line-height: 1.2;    /* Adds vertical space inside the title box */
+  display: block;      /* Ensures it takes up its own full line */
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  
+  /* --- THE FIX --- */
+  margin-top: 20px;    /* Physical gap between Title and Subtitle */
+  margin-bottom: 30px; /* Gap between Subtitle and Button */
+}
+
+.explore-btn {
+  background-color: #ff007f;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.explore-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff007f;
+}

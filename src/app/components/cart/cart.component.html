@@ -1,0 +1,25 @@
+<div class="cart-overlay">
+  <div class="cart-modal">
+    <div class="cart-header">
+      <span class="cart-icon">🛒</span>
+      <h2>Your Cart</h2>
+    </div>
+
+    <div class="cart-items">
+      <div class="cart-row" *ngFor="let item of cartItems; let i = index">
+        <span class="item-name">{{ item.name }}</span>
+        <span class="item-price">{{ item.price | currency }}</span>
+        <button class="remove-btn" (click)="removeItem(i)">✕</button>
+      </div>
+    </div>
+
+    <div class="cart-footer" *ngIf="cartItems.length > 0">
+      <div class="total-section">
+        <strong>Total: {{ getGrandTotal() | currency }}</strong>
+      </div>
+      <button class="proceed-btn" routerLink="/checkout">Proceed to Checkout</button>
+    </div>
+    
+    <p *ngIf="cartItems.length === 0" class="empty-msg">Your cart is lonely! 🍕</p>
+  </div>
+</div>
