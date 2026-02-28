@@ -1,5 +1,10 @@
 # RestaurantApp
 
+🚀 Live Demo
+You can view the live application here:
+
+👉 https://ramya-9739.github.io/restaurant-app-pro/
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
 
 ## Development server
